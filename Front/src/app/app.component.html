@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <h1>Ultima lectura</h1>
+    <h1>Temp: {{lasttemp.toFixed(2)}}</h1>
+    <h1>Hum: {{lasthum.toFixed(2)}}</h1>
+  
+    <mat-grid-list cols="2" rowHeight="1:1">
+      
+        <mat-grid-tile>
+          <mat-card>
+            <div class="graph">
+              <p>Grafica en tiempo real</p>
+              <canvas baseChart width="900" height="500"
+                [type]="'line'"
+                [data]="lineChartData"
+                [options]="lineChartOptions"
+                [legend]="lineChartLegend">
+              </canvas>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+  
+      
+        <mat-grid-tile>
+          <mat-card>
+            <app-hisorial>
+              
+            </app-hisorial>
+          </mat-card>
+        </mat-grid-tile>
+      
+      
+    </mat-grid-list>
+  </body>
+
+</html>
+
+
+
+
+
